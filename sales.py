@@ -14,26 +14,6 @@ fig_hourly = px.line(df.groupby('Hour').sum().reset_index(), x='Hour', y='Sales'
 # สร้างหน้าจอของแอป Streamlit
 st.title('Interactive Sales Dashboard')
 
-# st.subheader('Monthly Sales')
-# st.plotly_chart(fig_monthly)
-
-# st.subheader('Sales by City')
-# st.plotly_chart(fig_city)
-
-# st.subheader('Sales by Hour')
-# st.plotly_chart(fig_hourly)
-
-# option = st.radio('Choose a chart to display:', 
-#                  ['Monthly Sales', 'Sales by City', 'Sales by Hour'])
-
-# # แสดงกราฟตามตัวเลือกที่เลือก
-# if option == 'Monthly Sales':
-#     st.plotly_chart(fig_monthly)
-# elif option == 'Sales by City':
-#     st.plotly_chart(fig_city)
-# else:
-#     st.plotly_chart(fig_hourly)
-
 tabs = st.tabs(["Monthly Sales", "Sales by City", "Sales by Hour"])
 
 # แสดงกราฟในแต่ละแท็บ
